@@ -49,8 +49,13 @@ class Parser:
         listOfTags = self.parse(soup, tag, className)
         return listOfTags
 
+    '''
+    # Pretty print of the website as a text
+    '''
+    def ppretty(self):
+        print(self.getSoup(self.website).prettify())
+
 # usage example:
 habr = Parser("https://habr.com/en/flows/develop/")
 print(habr)
 storedTags = habr.getListOfTags('article', 'post post_preview')
-
