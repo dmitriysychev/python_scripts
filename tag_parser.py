@@ -27,3 +27,6 @@ def parse(soup, html_tag, class_name):
         tags.append(post_title)
     return tags
 
+# usage example:
+soup = getSoup("https://habr.com/en/flows/develop/")
+listOfTags = parse(soup, 'article', 'post post_preview')
