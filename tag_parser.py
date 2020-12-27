@@ -70,7 +70,7 @@ habr = Parser("https://habr.com/en/flows/develop/")
 print(habr)
 storedTags = habr.getListOfTags('article', 'post post_preview')
 
-particularTag = habr.extractTag('h2', storedTags)
+particularTagList = habr.extractTag('h2', storedTags)
 
-#for example this is how you would get a post title from this website
-print(particularTag[0].find('a').string)
+#for example this is how you would get a post titles from this website
+print([element.find('a').string for element in particularTagList])
