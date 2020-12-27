@@ -72,5 +72,7 @@ storedTags = habr.getListOfTags('article', 'post post_preview')
 
 particularTagList = habr.extractTag('h2', storedTags)
 
-#for example this is how you would get a post titles from this website
+# for example this is how you would get a post titles from this website
+# every title on this website is a link and stored under <a></a> tags
+# so if you want to extract a list of titles, perform the following:
 print([element.find('a').string for element in particularTagList])
