@@ -29,7 +29,7 @@ class Parser:
     # Method for parsing
     # returns a list of tags specified by the parameter 'html_tag'
     '''
-    def parse(self, soup, html_tag, class_name = None):
+    def parse(self, soup, html_tag=None, class_name = None):
         attrs = {}
         self.tags = []
         if class_name is not None:
